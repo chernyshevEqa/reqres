@@ -15,10 +15,9 @@ class TestPositiveGetListUser():
 
 class TestNegativeGetListUser():
     random_number = Checking.create_random_number()
-
     """получение списка несуществующей странице"""
     def test_get_user_list_invalid_page(self):
         get_user_list_result = ApiMethods.get_user_list(13)
-        Checking.check_status_code(get_user_list_result, 200)
+        Checking.check_status_code(get_user_list_result.status_code, 200)
 
 
