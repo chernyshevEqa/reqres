@@ -6,5 +6,10 @@ pipeline {
                 bat 'C:\\Users\\Жеконя\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pip install -r requirements.txt'
             }
         }
+        stage('Run tests') {
+            steps {
+                bat 'C:\\Users\\Жеконя\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\pytest.exe tests/ --html=report.html'
+            }
+        }
     }
 }
