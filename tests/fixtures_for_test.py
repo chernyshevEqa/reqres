@@ -24,4 +24,5 @@ def generate_email_with_ascii():
     email_with_symbols = faker.email()
     random_numbers = faker.random_number(digits=3)
     full_email = f"{random_numbers}{email_with_symbols}"
+    print("ok")
     return full_email
